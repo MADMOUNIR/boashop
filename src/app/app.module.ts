@@ -11,10 +11,15 @@ import { ShopComponent } from './shop/shop/shop.component';
 import { SingleProductComponent } from './shop/single-product/single-product.component';
 import { RouterModule, Routes } from '@angular/router';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { RegisterComponent } from './auth/register/register.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 const routes : Routes = [
 {path : 'home' , component : HomeComponent},
 {path : 'shop' , component : ShopComponent},
+{path : 'login' , component : LoginComponent},
+{path : 'register' , component : RegisterComponent},
 {path : 'single-product/:id' , component : ShopComponent},
 {path : 'not-found' , component : NotFoundComponent},
 {path : '' , component : HomeComponent},
@@ -31,11 +36,15 @@ const routes : Routes = [
     LoginComponent,
     ShopComponent,
     SingleProductComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes),
+    HttpClientModule ,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
