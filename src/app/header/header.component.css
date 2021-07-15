@@ -1,0 +1,9 @@
+ul.main-menu li {
+  cursor: pointer;
+  color: black;
+}
+.text-welcome {
+  font-weight: 700;
+  font-family: "Gilroy-Bold ☞";
+  font-size: 16px;
+}

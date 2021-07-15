@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class ShopComponent implements OnInit {
 
   constructor() { }
+  loading : boolean = false;
 
   ngOnInit(): void {
   }

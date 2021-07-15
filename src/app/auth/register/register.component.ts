@@ -63,24 +63,23 @@ console.log( this.registerForm.get('firstname').value);
 
    }
 
-   //créeation de l'utilisateur
+   //création de l'utilisateur
    this.userService.createUser(newUser).then(
-     (data) => {
+     (data ) => {
        //utilisateur crée  => redirection vers shop
        this.errorMessage = null ;
-       this.successMessage = data + " ... redirection vers le shop ...." ;
-       setTimeout(() => {
-         this.router.navigate(['/shop']);
-       }, 2000);
+       this.successMessage = " User created ! ... redirection vers le shop ...." ;
+       console.log(data);
+
+      //  setTimeout(() => {
+      //    this.router.navigate(['/shop']);
+      //  }, 2000);
 
 
      }
    ).catch(
      (error) => {
-       this.errorMessage = error ;
-       setTimeout(() => {
-         this.errorMessage = null;
-       }, 3000);
+       this.errorMessage = error.error.message ;
        console.log("erreur de regestration :"+error);
 
      }

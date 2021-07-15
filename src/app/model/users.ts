@@ -1,5 +1,5 @@
 export interface Users {
-  idUser? : number ;
+  idUser? : string ;
   sexe? : number ;
   pseudo? : string ;
   firstName? : string ;
@@ -7,6 +7,7 @@ export interface Users {
   email : string ;
   password : string ;
   dateBirth? : string ;
+  token? : string;
 
 
 }
